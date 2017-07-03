@@ -22,5 +22,6 @@ chrome.tabs.executeScript({
         }
 
         document.getElementById("output").innerHTML = schoolRank;
+        chrome.contextMenus.create({"title": schoolRank});
     }
 });
