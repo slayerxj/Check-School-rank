@@ -1,17 +1,10 @@
 {
-    "manifest_version": 2,
-
-    "name": "Check school rank",
-    "description": "This extension shows how this school is ranked",
-    "version": "0.1",
-
-    "browser_action": {
-        "default_icon": "xue.gif",
-        "default_title": "Check!",
-        "default_popup": "popup.html"
-    },
-
-    "permissions": [
-        "activeTab"
-    ]
+  "name": "Check school rank",
+  "description": "This extension shows how this school is ranked",
+  "version": "0.2",
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["check.js"]
+  },
+  "manifest_version": 2
 }
