@@ -3,15 +3,21 @@
 
     "name": "Check school rank",
     "description": "This extension shows how this school is ranked",
-    "version": "0.1",
+    "version": "0.1.1",
 
     "browser_action": {
-        "default_icon": "xue.gif",
+        "default_icon": "xue128.png",
         "default_title": "Check!",
         "default_popup": "popup.html"
     },
 
     "permissions": [
         "activeTab"
-    ]
+    ],
+
+    "icons": {
+        "16": "xue128.png",
+        "48": "xue128.png",
+        "128": "xue128.png"
+    }
 }
