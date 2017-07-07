@@ -30,6 +30,7 @@ chrome.tabs.executeScript({
         return false;
     };
 
+    // TODO: Normalized USA universities' names
     var normalizeName = function (schoolName) {
         var normalSuffixes = ["大学", "学院", "京）", "东）", "汉）", "分校", "圳）", "学校"];
         var suffix = schoolName.slice(-2);
@@ -40,6 +41,7 @@ chrome.tabs.executeScript({
             if (abbrSuffix == "大") {
                 normalizedNames.push(schoolName + "学");
             } else {
+                // By checking all school names, there will never be two schools one named as XXXX大学, another named as XXXX学院 or 学校
                 normalizedNames.push(schoolName + "大学");
                 normalizedNames.push(schoolName + "学院");
                 normalizedNames.push(schoolName + "学校");
